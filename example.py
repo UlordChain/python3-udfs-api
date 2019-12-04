@@ -14,5 +14,5 @@ def upload():
     url = tool.getUploadUrl(10000,"secretKey","uosAccount","D:\\home\\1.mp4","")
     upload_res = requests.post(url,files=files)
     print(upload_res)
-upload()
+# upload()
 download()

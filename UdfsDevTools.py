@@ -41,7 +41,7 @@ class UdfsDevTools():
             textByte = json.encode(encoding="utf-8")
             encodedPolicy = base64.urlsafe_b64encode(textByte)
             my_sign = hmac.new(secretKey.encode(encoding="utf-8"), encodedPolicy, sha1).digest()
-            encodeSign = base64.b64encode(my_sign)
+            encodeSign = base64.urlsafe_b64encode(my_sign)
         except Exception as ex:
             raise Exception("构建下载链接出错" + ex.toString())
         token = uosAccount + ":" + str(encodeSign, encoding="utf-8") + ":" + str(encodedPolicy, encoding="utf-8")
@@ -60,7 +60,7 @@ class UdfsDevTools():
             textByte = json.encode(encoding="utf-8")
             encodedPolicy = base64.urlsafe_b64encode(textByte)
             my_sign = hmac.new(secretKey.encode(encoding="utf-8"), encodedPolicy, sha1).digest()
-            encodeSign = base64.b64encode(my_sign)
+            encodeSign = base64.urlsafe_b64encode(my_sign)
         except Exception as ex:
             raise Exception("构建下载链接出错" + ex.toString())
         token = uosAccount + ":" + str(encodeSign, encoding="utf-8") + ":" + str(encodedPolicy, encoding="utf-8")
