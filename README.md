@@ -19,6 +19,12 @@
         url = tool.getUploadUrl(10000,"secretKey","uosAccount","D:\\home\\1.mp4","")
         upload_res = requests.post(url,files=files)
         print upload_res
+        
+    def delete():
+        tool = UdfsDevTools.UdfsDevTools()
+        url = tool.deletefile("uosAccount","secretKey", 10000,"QmTLXPs77vn6ss268ghAUbnMFR12yzR5cHr3kud19SZWTs")
+        conn = requests.delete(url)
+        print(conn)
  
  # tips
    You can obtain the key and the uosAccount from the Ulord foundation 
