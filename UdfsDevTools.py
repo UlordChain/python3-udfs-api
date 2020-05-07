@@ -20,7 +20,7 @@ class UdfsDevTools():
         f.close()
         return myhash.hexdigest()
 
-    #expireSec:指定毫秒后过期时间
+    #expireSec:指定x秒后过期时间
     #secretKey:秘钥,用于udfs访问,从udfs官方获取
     #uosAccount:uos账号
     #filePath:需要上传的文件路径
@@ -49,7 +49,7 @@ class UdfsDevTools():
 
     #uosAccount:uos账号
     #secretKey:秘钥,用于udfs访问,从udfs官方获取
-    #expireSec:指定毫秒后过期时间
+    #expireSec:指定x秒后过期时间
     #hashvalue:要下载的对象哈希值
     def getDownloadUrl(self,uosAccount,secretKey,expireSec,hashvalue):
         expireTime = int(time.time())
